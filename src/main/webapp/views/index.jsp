@@ -60,6 +60,7 @@
 		</table>
 
 	</form:form>
+	<a href="viewStudents"> view Students</a>
 
 </body>
 </html>

@@ -88,6 +88,13 @@ public class SrudentController {
 	
 	//method to display saved Student Data
 	
+	@GetMapping("/viewStudents")
+	public String getStudentData(Model model) {
+		List<StudentEntity> allStu = repo.findAll();
+		model.addAttribute("students",allStu);
+		return "data";
+	}
+	
 	
 
 }
