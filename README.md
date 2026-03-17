@@ -1,161 +1,161 @@
-# Spring Boot MVC Student Form Management
+🚀 Spring Boot MVC Student Form Management
 
-A simple **Student Registration Web Application** built using **Spring Boot, Spring MVC, JSP, and H2 Database**.
+A Student Registration & Management Web Application built using Spring Boot, Spring MVC, JSP, JSTL, and H2 Database.
 
-This project demonstrates how to build a **form-based web application using Spring MVC architecture** and store student data using **Spring Data JPA**.
+This project demonstrates how to build a complete form-based web application with data persistence and data viewing functionality using Spring MVC architecture.
 
----
+--------------------------------------------------
 
-## Project Overview
+📌 Project Overview
 
-This application allows users to register students through a web form.
-The submitted data is processed by a Spring MVC controller and stored in an **H2 in-memory database**.
+This application allows users to:
+- 📝 Register students through a web form
+- 💾 Store student data in an H2 database
+- 📊 View all registered students in a table format
 
-The project follows the **MVC (Model–View–Controller)** architecture which separates application logic, UI, and data handling.
+The project follows the MVC (Model–View–Controller) architecture.
 
----
+--------------------------------------------------
 
-## Features
+✨ Features
 
-* Student registration form
-* Gender selection using radio buttons
-* Course selection using dropdown menu
-* Multiple class timing selection using checkboxes
-* Form submission handled by Spring MVC
-* Student data stored in database using JPA
-* Success message displayed after saving
+🔹 Core Features:
+- 🧾 Student Registration Form
+- 🚻 Gender selection using radio buttons
+- 📚 Course selection using dropdown
+- ⏰ Multiple timing selection using checkboxes
+- 📩 Form submission handled by Spring MVC
 
----
+🆕 Newly Added Features:
+- 👀 View all registered students
+- 🔁 Dynamic student table using JSTL <c:forEach>
+- 🔢 Serial number generation using loop index
+- 🔗 Navigation between pages (Add Student ↔ View Students)
+- 📥 Data fetched from database and displayed in UI
 
-## Tech Stack
+--------------------------------------------------
 
-### Backend
+🛠 Tech Stack
 
-* Java 21
-* Spring Boot
-* Spring MVC
-* Spring Data JPA
+🔹 Backend:
+- ☕ Java 21
+- 🌱 Spring Boot
+- 🧩 Spring MVC
+- 🗄 Spring Data JPA
 
-### Frontend
+🔹 Frontend:
+- 🖥 JSP (Java Server Pages)
+- 🔄 JSTL (Jakarta Standard Tag Library)
+- 🧷 Spring Form Tags
 
-* JSP (Java Server Pages)
-* JSTL
-* Spring Form Tags
+🔹 Database:
+- 🗃 H2 In-Memory Database
 
-### Database
+🔹 Build Tool:
+- 🔧 Maven
 
-* H2 In-Memory Database
+🔹 Server:
+- 🌐 Embedded Apache Tomcat
 
-### Build Tool
+--------------------------------------------------
 
-* Maven
-
-### Server
-
-* Embedded Apache Tomcat
-
----
-
-## Project Architecture
-
-The application follows **Spring MVC Architecture**.
+🏗 Project Architecture
 
 Client (Browser)
-|
-v
+       ↓
 Spring MVC Controller
-|
-v
+       ↓
 Spring Data JPA Repository
-|
-v
+       ↓
 H2 Database
 
----
+--------------------------------------------------
 
-## Project Structure
+📁 Project Structure
 
 src/main/java
-
-controller
-
-* StudentController.java
-
-binding
-
-* Student.java
-
-entity
-
-* StudentEntity.java
-
-repository
-
-* StudentRepo.java
+ ├── controller
+ │     └── SrudentController.java
+ ├── binding
+ │     └── Student.java
+ ├── entity
+ │     └── StudentEntity.java
+ ├── repository
+ │     └── StudentRepo.java
 
 src/main/webapp/views
+ ├── index.jsp
+ └── data.jsp
 
-* index.jsp
+--------------------------------------------------
 
-resources
+🔄 Application Workflow
 
-* application.properties
+📝 Student Registration:
+1. User opens the registration page
+2. Form data (courses, timings) is loaded
+3. User fills and submits the form
+4. Controller processes the data
+5. Data is converted to Entity
+6. Saved into H2 database
+7. ✅ Success message displayed
 
----
+📊 View Students:
+1. User clicks "View Students"
+2. Controller fetches all records from DB
+3. Data is passed to JSP
+4. 🔁 JSTL displays data in table format
 
-## Application Workflow
+--------------------------------------------------
 
-1. User opens the **Student Registration page**.
-2. The controller loads form data (courses and timings).
-3. User fills the form and submits the details.
-4. The controller receives the form data.
-5. Data is converted into an **Entity object**.
-6. Spring Data JPA saves the student record in the **H2 database**.
-7. The application displays a **"Student Saved" confirmation message**.
+💡 Key Concepts Implemented
 
----
+- 🧠 Spring MVC Form Handling
+- 🔗 Model Binding
+- 💉 Dependency Injection (@Autowired)
+- 🗂 JPA Entity Mapping
+- 🧩 Repository Pattern
+- 🔄 JSP + JSTL Integration (Jakarta)
+- 📊 Dynamic Data Rendering using <c:forEach>
 
-## Key Concepts Implemented
+--------------------------------------------------
 
-* Spring MVC Form Handling
-* Model Binding
-* Dependency Injection (`@Autowired`)
-* JPA Entity Mapping
-* Repository Pattern using Spring Data JPA
-* JSP integration with Spring Boot
-* Spring Form Tag Library
+📚 Learning Outcomes
 
----
+- 📌 Understanding Spring MVC architecture
+- 🧾 Handling form data using Spring Boot
+- 🖥 Using JSP with Jakarta libraries
+- 🔄 Integrating JSTL with Spring Boot
+- 🗄 Mapping Java objects to database tables using JPA
+- 🔗 Implementing Controller → Repository → Database flow
+- 📊 Displaying dynamic data in JSP
+- 🐞 Debugging JSTL and Jakarta migration issues
 
-## Learning Outcomes
+--------------------------------------------------
 
-Through this project I learned:
+🚀 Future Improvements
 
-* How **Spring MVC architecture works**
-* Handling **form data using Spring Boot**
-* Using **JSP with Spring Boot**
-* Mapping Java objects to database tables using **JPA**
-* Implementing **Controller → Repository → Database flow**
-* Using **H2 database for development and testing**
+- ✏️ Edit student details
+- ❌ Delete student records
+- ✅ Add form validation
+- 📄 Pagination for student list
+- 🐬 Integrate MySQL/PostgreSQL
+- 🔌 Convert to REST API
+- ⚛️ Build frontend using React
 
----
+--------------------------------------------------
 
-## Future Improvements
+👨‍💻 Author
 
-Possible improvements for this project:
-
-* Display registered student list
-* Edit student information
-* Delete student records
-* Add form validation
-* Integrate MySQL instead of H2
-* Convert the application to REST API
-
----
-
-## Author
-
-**Raju Chowdhury**  
+Raju Chowdhury  
 B.Tech Computer Science and Engineering (3rd Year)
 
-This project was developed as part of my learning journey in **Spring Boot, Spring MVC architecture, and backend web application development using Java , SpringBoot**.
+--------------------------------------------------
+
+⭐ Project Highlights
+
+- 🔥 End-to-end MVC application
+- 🗄 Database integration using JPA
+- 📊 Dynamic UI rendering using JSTL
+- 🧱 Clean layered architecture
+- 🛠 Real-world debugging experience
