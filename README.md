@@ -61,31 +61,20 @@ The project follows the MVC (Model–View–Controller) architecture.
 
 🏗 Project Architecture
 
-Client (Browser)
+Client (Browser).
 ↓
-Spring MVC Controller
+
+Spring MVC Controller.
 ↓
-Spring Data JPA Repository
+
+Spring Data JPA Repository.
 ↓
+
 H2 Database
 --------------------------------------------------
 
-📁 Project Structure
 
-src/main/java
-├── controller
-│ └── SrudentController.java
-├── binding
-│ └── Student.java
-├── entity
-│ └── StudentEntity.java
-├── repository
-│ └── StudentRepo.java
-src/main/webapp/views
-├── index.jsp
-└── data.jsp
 
---------------------------------------------------
 
 🔄 Application Workflow
 
